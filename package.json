@@ -1,0 +1,49 @@
+{
+  "name": "injectmee",
+  "version": "0.0.1",
+  "description": "Inject CSS and JS inside yout html",
+  "main": "injectme.js",
+  "scripts": {
+    "test": "istanbul cover jasmine-runner.js"
+  },
+  "bin": {
+    "rename-me": "./bin/injectme"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iondrimba/injectme.git"
+  },
+  "keywords": [
+    "npm",
+    "inject",
+    "inline",
+    "css",
+    "javascript",
+    "node",
+    "spa"
+  ],
+  "author": "Ion D. Filho <iondrimba@gmail.com> (https://iondrimbafilho.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iondrimba/injectme/issues"
+  },
+  "homepage": "https://github.com/iondrimba/injectme#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "semver": "^5.1.0"
+  },
+  "devDependencies": {
+    "commander": "^2.9.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-bump": "^2.0.1",
+    "gulp-coveralls": "^0.1.4",
+    "gulp-istanbul": "^0.10.3",
+    "istanbul": "^0.4.2",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "jasmine-node": "^1.14.5",
+    "jasmine-reporters": "^2.1.1",
+    "jasmine-spec-reporter": "^2.4.0"
+  }
+}

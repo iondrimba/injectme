@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for injectme\spec\injectMeSpec.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">injectme/spec/</a> injectMeSpec.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>43/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>43/43</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var injectMe = require('../injectme.js');
+var fs = require('fs');
+var del = require('del');
+&nbsp;
+describe('InjectMe Tests', function() {
+    function clearHtml() {
+        var indexFile = './public/index.html';
+        var content = fs.readFileSync(indexFile, 'utf8');
+        //remove injected script
+        content = content.replace(/\&lt;script\&gt;(.+)|(.+\n*)?\&lt;\/script\&gt;/igm, '');
+        //remove injected style
+        content = content.replace(/\&lt;style\&gt;(.+)|(.+\n*)?\&lt;\/style\&gt;/igm, '');
+        //remove blank lines from head
+        content = content.replace(/\&gt;\n+?\&lt;\/head\&gt;/igm, '&gt;\n&lt;/head&gt;');
+        //remove blank lines from body
+        content = content.replace(/\&gt;\n+?\&lt;\/body\&gt;/igm, '&gt;\n&lt;/body&gt;');
+&nbsp;
+        fs.writeFileSync(indexFile, content, 'utf8');
+    };
+    afterEach(function() {
+        clearHtml();
+    });
+&nbsp;
+    it('InjectMe should be defined ', function() {
+        expect(injectMe).toBeDefined();
+    });
+&nbsp;
+    it('Should inject CSS into html', function() {
+        var result = false,
+            options = {};
+&nbsp;
+        options.cssPath = './public/css/app.css';
+        options.indexFile = './public/index.html';
+        injectMe(options);
+&nbsp;
+        var content = fs.readFileSync(options.indexFile, 'utf8');
+        result = (content.match(/\&lt;style\&gt;.+\&lt;\/style\&gt;/gm) !== null);
+        expect(result).toBe(true);
+    });
+&nbsp;
+    it('Should inject JS into html', function() {
+        var result = false,
+            options = {};
+&nbsp;
+        options.jsPath = './public/js/app.js';
+        options.indexFile = './public/index.html';
+        injectMe(options);
+&nbsp;
+        var content = fs.readFileSync(options.indexFile, 'utf8');
+        result = (content.match(/\&lt;script\&gt;.+\&lt;\/script\&gt;/gm) !== null);
+        expect(result).toBe(true);
+    });
+&nbsp;
+    it('Should inject CSS and JS into html', function() {
+        var resultCSS = false,
+            resultJS = false,
+            options = {};
+&nbsp;
+        options.cssPath = './public/css/app.css';
+        options.jsPath = './public/js/app.js';
+        options.indexFile = './public/index.html';
+        injectMe(options);
+&nbsp;
+        var content = fs.readFileSync(options.indexFile, 'utf8');
+        resultCSS = (content.match(/\&lt;style\&gt;.+\&lt;\/style\&gt;(\n)?\&lt;\/head\&gt;/gm) !== null);
+        resultJS = (content.match(/\&lt;script\&gt;(.+)|(.+\n*)?\&lt;\/script\&gt;(\n)\&lt;\/body\&gt;/igm) !== null);
+&nbsp;
+        expect(resultCSS).toBe(true);
+        expect(resultJS).toBe(true);
+    });
+&nbsp;
+});
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Mar 30 2016 00:17:00 GMT-0300 (Hora oficial do Brasil)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
