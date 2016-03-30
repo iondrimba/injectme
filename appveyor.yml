@@ -10,9 +10,6 @@ install:
   - npm install gulp -g
 test_script:
   - npm test
-  - gulp bump-patch
-  - gulp bump-minor
-  - gulp bump-major
 build: off
 matrix:
   fast_finish: true

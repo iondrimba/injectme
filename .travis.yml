@@ -9,6 +9,3 @@ before_script:
 script:
 - npm test 
 - gulp coveralls
-- gulp bump-patch
-- gulp bump-minor
-- gulp bump-major
