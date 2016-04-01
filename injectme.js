@@ -1,7 +1,5 @@
 'use-strict'
-// node >  rename-me file version outputpath index.html
-// demo > node rename-me src/app.js 1.1.1 public/js public/index.html
-// output > public/app.1.1.1.js
+
 var fs = require('fs');
 var replace = require('replacestream');
 var injectMe = function(options) {
@@ -26,11 +24,6 @@ var injectMe = function(options) {
         if (filePath) {
             content = fs.readFileSync(filePath, 'utf8');
         }
-        return content;
-    }
-
-    function removeSpaces(content) {
-        content = content.replace(/\s/gm, '');
         return content;
     }
 
