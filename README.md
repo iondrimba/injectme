@@ -31,7 +31,7 @@ Inject CSS and JS inside your html
 Inside the terminal type:
 
 ```sh
-injectme public/css/app.js public/index.html
+injectme public/css/app.css public/index.html
 ```
 
 #### Multiple files
