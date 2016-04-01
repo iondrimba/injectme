@@ -1,6 +1,6 @@
 {
   "name": "injectmee",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Inject CSS and JS inside yout html",
   "main": "injectme.js",
   "scripts": {
@@ -29,8 +29,6 @@
   },
   "homepage": "https://github.com/iondrimba/injectme#readme",
   "dependencies": {
-    "commander": "^2.9.0",
-    "semver": "^5.1.0"
   },
   "devDependencies": {
     "commander": "^2.9.0",
@@ -44,7 +42,6 @@
     "jasmine-core": "^2.4.1",
     "jasmine-node": "^1.14.5",
     "jasmine-reporters": "^2.1.1",
-    "jasmine-spec-reporter": "^2.4.0",
-    "replacestream": "^4.0.0"
+    "jasmine-spec-reporter": "^2.4.0"
   }
 }

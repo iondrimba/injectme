@@ -34,6 +34,16 @@ describe('InjectMe Tests', function() {
         expect(injectedHtml).toBe(htmlContent);
     });
 
+    it('Should throw exception', function() {
+        expect(function() {
+            var result = false;
+            var options = {};
+
+            injectMe(options);
+
+        }).toThrow();
+    });
+
     it('Should inject CSS and JS into html', function() {
         var resultCSS = false,
             resultJS = false,
