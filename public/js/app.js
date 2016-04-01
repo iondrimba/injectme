@@ -1,1 +1,5 @@
-alert('JS injected');
+function hello() {
+    alert('hello');
+}
+
+hello();

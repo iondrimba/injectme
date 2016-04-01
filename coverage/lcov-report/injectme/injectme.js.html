@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">96.67% </span>
+        <span class="strong">92.11% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>29/30</span>
+        <span class='fraction'>35/38</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">85.71% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>6/6</span>
+        <span class='fraction'>6/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">96.67% </span>
+        <span class="strong">92.11% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>29/30</span>
+        <span class='fraction'>35/38</span>
       </div>
     </div>
   </div>
@@ -102,21 +102,29 @@
 57
 58
 59
-60</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+60
+61
+62
+63
+64
+65
+66
+67
+68</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3×</span>
@@ -134,28 +142,36 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -166,19 +182,19 @@
 // demo &gt; node rename-me src/app.js 1.1.1 public/js public/index.html
 // output &gt; public/app.1.1.1.js
 var fs = require('fs');
-&nbsp;
+var replace = require('replacestream');
 var injectMe = function(options) {
     try {
         var cssContent = getContentFromFile(options.cssPath),
             jsContent = getContentFromFile(options.jsPath),
             indexContent = getContentFromFile(options.indexFile);
 &nbsp;
-&nbsp;
         indexContent = injectContentCss(cssContent, indexContent);
         indexContent = injectContentJs(jsContent, indexContent);
-        console.log('content', indexContent);
 &nbsp;
         saveIndexFile(indexContent, options.indexFile);
+&nbsp;
+        return indexContent;
 &nbsp;
     } catch (ex) {
 <span class="cstat-no" title="statement not covered" >        throw new Error('error: ' + ex.message);</span>
@@ -192,30 +208,38 @@ var injectMe = function(options) {
         return content;
     }
 &nbsp;
-    function removeSpaces(content) {
-        content = content.replace(/\s/gm, '');
-        return content;
+<span class="fstat-no" title="function not covered" >    function removeSpaces(content) {</span>
+<span class="cstat-no" title="statement not covered" >        content = content.replace(/\s/gm, '');</span>
+<span class="cstat-no" title="statement not covered" >        return content;</span>
+    }
+&nbsp;
+    function cleanDuplicated(input, content) {
+        var mergedContent = content.replace(input, '');
+        return mergedContent;
     }
 &nbsp;
     function injectContentCss(content, indexContent) {
-&nbsp;
+        var styleinline = '&lt;style&gt;' + content + '&lt;/style&gt;';
         if (content.length) {
-            content = removeSpaces(content);
-            indexContent = indexContent.replace(/\&lt;\/head\&gt;/igm, '&lt;style&gt;' + content + '&lt;/style&gt;\n\&lt;\/head\&gt;');
+            indexContent = cleanDuplicated(styleinline, indexContent);
+            indexContent = indexContent.replace(/\&lt;\/head\&gt;/igm, styleinline + '&lt;/head&gt;');
         }
-&nbsp;
         return indexContent;
     }
 &nbsp;
     function injectContentJs(content, indexContent) {
+        var scriptinline = '&lt;script&gt;' + content + '&lt;/script&gt;';
+&nbsp;
         if (content.length) {
-            indexContent = indexContent.replace(/\&lt;\/body\&gt;/igm, '&lt;script&gt;' + content + '&lt;/script&gt;\n\&lt;\/body\&gt;');
+            indexContent = cleanDuplicated(scriptinline, indexContent);
+            indexContent = indexContent.replace(/\&lt;\/body\&gt;/igm, scriptinline + '&lt;/body&gt;');
         }
         return indexContent;
     }
 &nbsp;
     function saveIndexFile(content, indexFile) {
         fs.writeFileSync(indexFile, content, 'utf8');
+        return content;
     }
 }
 &nbsp;
@@ -226,7 +250,7 @@ module.exports = injectMe
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Mar 30 2016 00:17:00 GMT-0300 (Hora oficial do Brasil)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Mar 31 2016 22:05:12 GMT-0300 (Hora oficial do Brasil)
 </div>
 </div>
 <script src="../prettify.js"></script>

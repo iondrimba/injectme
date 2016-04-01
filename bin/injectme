@@ -1,29 +1,66 @@
 #!/usr/bin/env node
 
-var renameMe = require("../injectme.js");
+var injectme = require("../injectme.js");
 var program = require('commander');
+var fs = require('fs');
 
 program
-  .version(require('../package.json').version)
-  .usage('injectme file.js index.html')
-  .on('--help', function(){
-    console.log('  Examples:');
-    console.log('');
-    console.log('    $ injectme public/js/app.js public/index.html');
-    console.log('');
-  })
-  .parse(process.argv);
+    .version(require('../package.json').version)
+    .usage('injectme file.js index.html')
+    .on('--help', function() {
+        console.log('  Examples:');
+        console.log('');
+        console.log('    $ injectme public/js/app.js public/index.html');
+        console.log('    $ injectme public/css/app.css public/index.html');
+        console.log("    $ injectme 'public/js/app.js', 'public/css/app.css' public/index.html");
+        console.log('');
+    })
+    .parse(process.argv);
 
 if (process.argv.length > 2) {
 
-    var fs = require('fs');
-    var filePath = process.argv[2];
+    var files = process.argv[2];
     var indexFile = process.argv[3];
-
-
     var options = {};
-    options.cssPath = filePath.split(',');
-    options.jsPath = filePath.split(',');
+    var splittedFiles = files.split(',');
+    var extension = '';
+
+
+    function getFileExtension(file) {
+        var result = '';
+        result = file.replace(/.+([^\/])\/[a-z]{1,}./igm, '');
+        return result.toLowerCase();
+    }
+
+    if (splittedFiles.length > 1) {
+
+        //MULTIPLE FILES PASSED AS PARAMETER
+        var firstFile = splittedFiles[0];
+        var secondFile = splittedFiles[1];
+
+        extension = getFileExtension(firstFile);
+
+        if (extension === 'css') {
+            options.cssPath = firstFile;
+            options.jsPath = secondFile;
+        }
+        if (extension === 'js') {
+            options.jsPath = firstFile;
+            options.cssPath = secondFile;
+        }
+
+    } else {
+        //ONLY ONE FILE PASSED AS PARAMETER
+        extension = getFileExtension(splittedFiles[0]);
+        if (extension === 'css') {
+            options.cssPath = splittedFiles[0];
+        }
+        if (extension === 'js') {
+            options.jsPath = splittedFiles[0];
+        }
+    }
+
     options.indexFile = indexFile;
-    renameMe(options);
+
+    injectme(options);
 }
