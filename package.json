@@ -1,6 +1,6 @@
 {
-  "name": "injectmee",
-  "version": "0.1.0",
+  "name": "injectme",
+  "version": "0.1.1",
   "description": "Inject CSS and JS inside yout html",
   "main": "injectme.js",
   "scripts": {
