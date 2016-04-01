@@ -5,28 +5,28 @@ Inject CSS and JS inside your html
 [![Build Status](https://travis-ci.org/iondrimba/injectme.svg?branch=master)](https://travis-ci.org/iondrimba/injectme) [![Build status](https://ci.appveyor.com/api/projects/status/mkn7bgjjv2een6lc?svg=true)](https://ci.appveyor.com/project/iondrimba/injectme) [![Coverage Status](https://coveralls.io/repos/github/iondrimba/injectme/badge.svg?branch=master)](https://coveralls.io/github/iondrimba/injectme?branch=master)
 
 
-## GOAL
+#### GOAL
 
 1. Avoid render blocking files
 2. Optimize critical path / above the fold CSS
 3. Optimize loading
 
-## INSTALL
+#### INSTALL
 
 ```sh
  npm install injectme -g
 ```
 
-## TODO
+#### TODO
 
 * Develop a Gulp plugin for easy integration
 * Write more tests
 
-## Target Project
+#### Target Project
 
 * This package is meant to be used with Single Page Applications
 
-## Terminal
+#### Terminal
 
 Inside the terminal type:
 
@@ -34,7 +34,7 @@ Inside the terminal type:
 injectme public/css/app.js public/index.html
 ```
 
-## Multiple files
+#### Multiple files
 
 * multiple parameters are passed inside quotes and comma separeted 'param1', 'param2'
 
@@ -42,7 +42,7 @@ injectme public/css/app.js public/index.html
 injectme 'public/js/app.js','public/css/app.css' public/index.html
 ```
 
-## Using with Gulp (workaround)
+#### Using with Gulp (workaround)
 
 Install injectme
 
