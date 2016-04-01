@@ -41,23 +41,3 @@ injectme public/css/app.css public/index.html
 ```sh
 injectme 'public/js/app.js','public/css/app.css' public/index.html
 ```
-
-#### Using with Gulp (workaround)
-
-Install injectme
-
-```sh
-npm install injectme -g
-```
-
-Inside your gulpfile load injectme
-
-```js
-var renameMe = require('injectme');
-```
-
-Finally you should run the rename task manually as the last task, do not chain it with other tasks.
-
-```sh
-gulp bump-patch
-```
