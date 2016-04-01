@@ -1,7 +1,7 @@
 'use-strict'
 
 var fs = require('fs');
-var replace = require('replacestream');
+
 var injectMe = function(options) {
     try {
         var cssContent = getContentFromFile(options.cssPath),
