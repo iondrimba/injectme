@@ -1,7 +1,7 @@
 {
   "name": "injectme",
-  "version": "0.1.1",
-  "description": "Inject CSS and JS inside yout html",
+  "version": "0.1.2",
+  "description": "Inject CSS and JS inside your html",
   "main": "injectme.js",
   "scripts": {
     "test": "istanbul cover jasmine-runner.js"
