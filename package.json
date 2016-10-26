@@ -1,6 +1,6 @@
 {
   "name": "injectme",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Inject CSS and JS inside your html",
   "main": "injectme.js",
   "scripts": {
@@ -29,9 +29,9 @@
   },
   "homepage": "https://github.com/iondrimba/injectme#readme",
   "dependencies": {
+    "commander": "^2.9.0"
   },
-  "devDependencies": {
-    "commander": "^2.9.0",
+  "devDependencies": {    
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-bump": "^2.0.1",
